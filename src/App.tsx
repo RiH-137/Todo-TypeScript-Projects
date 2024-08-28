@@ -1,26 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import TodoFunction from "./components/Todo";
+import { title } from "process";
+
+
+import Counter from "./components/Counter";
+
+const myTodoItems=[
+    {
+        id:1,
+        title:"i need to finish it."
+    },
+
+    {
+        id:2,
+        title:"ok lets go"
+    }
+]
+
+
+
+
+
+
+const App: React.FC =()=>{
+    return(
+
+        // promps--> style={{}}
+
+        // <div className="abc" style={{border: "1px solid red"}}>Todo Page   
+        // <div onClick={
+        //     () => {alert("You have clicked")}
+        // }>         
+
+
+
+        //     <TodoFunction items={myTodoItems}/>
+        // </div>        </div>
+
+
+        <div>
+            <TodoFunction items={myTodoItems} />
+            <Counter/>
+        </div>
+
+
+
+    )
+
+
+
+
 }
 
 export default App;

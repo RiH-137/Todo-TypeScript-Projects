@@ -1,0 +1,15 @@
+/* css file for todoitem */
+
+
+l1 {
+    background: aqua;
+    padding: 10px 20px;
+    border: 10px solid black;
+    margin: 10px;
+    display: flex;
+    cursor: pointer;
+}
+
+
+
+
