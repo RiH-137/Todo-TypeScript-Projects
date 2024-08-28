@@ -43,6 +43,12 @@ const App: React.FC =()=>{
         <div>
             <TodoFunction items={myTodoItems} />
             <Counter/>
+            <Counter/>
+            <Counter/>
+            <Counter/>
+            {/* All components have its own status. As there are 4 counters but all will not increament 
+            if i tap only one component. Increament is happened for the one whose button is
+             just clicked. Re-rendering is only possible for a particular counter.          */}
         </div>
 
 

@@ -8,11 +8,33 @@ const Counter: React.FC=(promps)=>{
     // we have not created this using useState thats why react will not re-render the component
     // import React, {useState} from "react";
     // const [counter, setCounter]=useState(0); means counter is a state variable and setCounter is a function to update the state variable
+
+    //useState is a hook which is used to create a state variable in functional component
+    // useEffect is a hook which is used to perform side effects in functional component
+    // fn is a function to update the state variable
+
+    // let [counter, fn]=useState(0);  
+    // console.log("counter", counter)
     
 
+    // const handleIncrement=()=>{
+    //     fn(20);
+    // };
+
+    let [counter, setCounter]=useState<number>(0);
+    console.log("Re-Render new value is ", counter);
+
     const handleIncrement=()=>{
-        counter++;
-        console.log("counter", counter)
+
+        setCounter(counter+1);
+
+    };
+
+    const handleDecrement=()=>{
+        if(counter===0){
+            return; 
+        }
+        setCounter(counter-1);
     };
 
 
@@ -26,7 +48,7 @@ const Counter: React.FC=(promps)=>{
                 
                 <button onClick={handleIncrement} style={{background:"lightgreen"}}>Inc</button>
                 
-                <button onClick={(e)=>counter--} style={{background:"tomato"}}>Dec</button>
+                <button onClick={handleDecrement} style={{background:"tomato"}}>Dec</button>
             
         </div>
     );
